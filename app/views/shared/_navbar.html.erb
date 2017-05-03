@@ -1,8 +1,17 @@
 <div class="navbar-container">
-  <i class="fa fa-user" aria-hidden="true"></i>
-  <% if user_signed_in? %>
-       <%= link_to('logout', destroy_user_session_path, method: :delete) %>
+  <div class="placeholder">
+  </div>
+  <div class="our-emblem">
+  </div>
+  <div class="user-account">
+    <% if user_signed_in? %>
+       <%= link_to destroy_user_session_path do %>
+         <i class="fa fa-user" aria-hidden="true"></i>
+      <% end %>
     <% else %>
-      <%= link_to('login', new_user_session_path) %>
+      <%= link_to new_user_session_path do %>
+        <i class="fa fa-user" aria-hidden="true"></i>
+      <% end %>
     <% end %>
+  </div>
 </div>

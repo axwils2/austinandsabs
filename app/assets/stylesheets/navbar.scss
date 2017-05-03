@@ -1,0 +1,17 @@
+.navbar-container {
+  position:fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: solid 1px black;
+
+  .placeholder, .user-account {
+    width: 50px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+}
