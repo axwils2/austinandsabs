@@ -1,7 +1,14 @@
 <div class="navbar-container">
-  <div class="placeholder">
-  </div>
-  <div class="our-emblem">
+  <div class="nav-links">
+    <div class="home-link">
+      <%= image_tag "logo.png" %>
+    </div>
+    <div class="photo-link">
+      <%= link_to "Photos", photos_path %>
+    </div>
+    <div class="roadmap-link">
+      Roadmap
+    </div>
   </div>
   <div class="user-account">
     <% if user_signed_in? %>
