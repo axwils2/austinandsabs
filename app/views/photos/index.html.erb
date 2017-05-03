@@ -1,3 +1,13 @@
 <div class="photo-container">
   <h1>Photos</h1>
+  <%= form_for Photo.new, method: "post" do |f| %>
+    <%= f.file_field :pictures, multiple: true %>
+    <%= button_tag type="Submit" %>
+  <% end %>
+
+  <% @photos.each do |photo| %>
+    <% photo.pictures.each do |picture| %>
+      <%= image_tag picture.url(:thumb).to_s %>
+    <% end %>
+  <% end %>
 </div>
