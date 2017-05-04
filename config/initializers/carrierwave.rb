@@ -4,7 +4,7 @@ CarrierWave.configure do |config|
     provider: 'Google',
     google_project: 'austinandsabs',
     google_client_email: 'austin@austinandsabs.iam.gserviceaccount.com',
-    google_json_key_location: 'austinandsabs-b9a220648286.json'
+    google_json_key_string: ENV["GOOGLE_JSON_KEY_STRING"]
   }
   config.storage = :fog
   config.fog_directory = 'austinandsabs-pics'
