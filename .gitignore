@@ -15,3 +15,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+austinandsabs-b9a220648286.json
+.fog
+carrierwave.rb

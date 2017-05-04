@@ -43,6 +43,12 @@ gem 'rmagick'
 
 gem 'carrierwave', '~> 1.0'
 
+gem "fog-google"
+
+gem "google-api-client", "> 0.8.5", "< 0.9"
+
+gem "mime-types"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
