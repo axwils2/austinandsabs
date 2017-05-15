@@ -1,24 +1,18 @@
 <div class="navbar-container">
   <div class="nav-links">
     <div class="home-link">
-      <%= image_tag "logo.png" %>
+      <%= link_to root_path, method: :get do %>
+        <%= image_tag "logo-small.png" %>
+      <% end %>
     </div>
-    <div class="photo-link">
+    <!-- <div class="photo-link">
       <%= link_to "Photos", photos_path %>
-    </div>
+    </div> -->
     <div class="roadmap-link">
-      Roadmap
+      <%= link_to "Roadmap", roadmaps_path %>
     </div>
-  </div>
-  <div class="user-account">
-    <% if user_signed_in? %>
-       <%= link_to destroy_user_session_path do %>
-         <i class="fa fa-user" aria-hidden="true"></i>
-      <% end %>
-    <% else %>
-      <%= link_to new_user_session_path do %>
-        <i class="fa fa-user" aria-hidden="true"></i>
-      <% end %>
-    <% end %>
+    <div class="restaurant-link">
+      <%= link_to "Restaurants", restaurants_path %>
+    </div>
   </div>
 </div>

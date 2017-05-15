@@ -17,6 +17,11 @@
     width: 50px;
     padding: 20px;
     font-size: 30px;
+
+    a {
+      color: #7A16B3;
+    }
+
   }
 
   .nav-links {
@@ -27,11 +32,28 @@
 
     div {
       padding: 0 20px;
+
+      a {
+        text-decoration: none;
+        color: #7A16B3;
+        font-size: 16px;
+      }
+
+      a:hover {
+        background-color: unset;
+        color: #b67bf0;
+      }
+    }
+
+    .photo-link, .roadmap-link {
+      border-right: 1px solid silver;
     }
 
     .home-link {
       img {
         width: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
     }
   }

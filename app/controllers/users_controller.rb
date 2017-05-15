@@ -1,3 +1,5 @@
-class PhotosController < ApplicationController
+class UsersController < ApplicationController
+  def show
 
+  end
 end
