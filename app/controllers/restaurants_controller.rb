@@ -1,10 +1,17 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+  before_action :set_restaurant, only: [:edit, :update, :destroy]
 
   # GET /restaurants
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.all
+    if params[:search]
+      @random_restaurant = Restaurant.get_random_restaurant
+      respond_to do |format|
+        format.js { render "render_possible" }
+      end
+    end
   end
 
   # GET /restaurants/1
@@ -24,15 +31,12 @@ class RestaurantsController < ApplicationController
   # POST /restaurants
   # POST /restaurants.json
   def create
-    @restaurant = Restaurant.new(restaurant_params)
-
+    @restaurant = Restaurant.create(restaurant_params)
+    @restaurant.save!
+    @restaurants = Restaurant.all
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
-        format.json { render :show, status: :created, location: @restaurant }
-      else
-        format.html { render :new }
-        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -61,6 +65,13 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  # def render_possible
+  #   @restaurants = params(:title)
+  #   respond_to do |format|
+  #     format.js
+  #   end
+  # end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant
@@ -69,6 +80,6 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.fetch(:restaurant, {})
+      params.fetch(:restaurant).permit(:title, :food_type, :type_array)
     end
 end

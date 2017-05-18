@@ -1,3 +1,83 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+button {
+  color: #7A16B3;
+  border: solid 3px #7A16B3;
+  background-color: unset;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  color: #b67bf0;
+  border-color: #b67bf0;
+  cursor: pointer;
+}
+
+.add-restaurant {
+  display: none;
+}
+
+.restaurant-button-container {
+  text-align: center;
+}
+
+.restaurant-display {
+  border: solid 3px silver;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  margin: 30px auto;
+}
+
+.restaurant-title {
+  padding: 15px 0;
+}
+
+.restaurant-container {
+  h1 {
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+.type-choice {
+  display: inline-block;
+  margin: 10px;
+  label {
+    display: inline-block;
+  }
+}
+
+fieldset {
+  border: none;
+  padding: 30px;
+  label {
+    display: inline-block;
+
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.type-chooser {
+  text-align: center;
+}
+
+.restaurant-panels {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .rest-panel {
+    width: 40%;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="add-restaurant rest-panel">
+  <%= form_for Restaurant.new, method:"post", :html => { class: 'create-restaurant-form' }, remote: true do |f|%>
+    <fieldset>
+      <h3>Name of the Restaurant</h3>
+      <label>Name</label>
+      <%= f.text_field :title, class: "form-control", required: true %>
+    </fieldset>
+    <fieldset>
+      <h3>What Type of Food Does It Have?</h3>
+      <% ['American', 'Chinese', 'Mediterranean', 'Sushi', 'Italian', 'Mexican', 'Indian'].each do |restaurant_type| %>
+        <div class="type-option">
+          <%= f.radio_button :food_type, restaurant_type %>
+          <label><%= restaurant_type %></label>
+        </div>
+      <% end %>
+    </fieldset>
+    <%= button_tag "Add", type:"submit", class: "add-rest" %>
+  <% end %>
+</div>
