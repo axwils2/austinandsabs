@@ -7,7 +7,7 @@
     </fieldset>
     <fieldset>
       <h3>What Type of Food Does It Have?</h3>
-      <% ['American', 'Chinese', 'Mediterranean', 'Sushi', 'Italian', 'Mexican', 'Indian'].each do |restaurant_type| %>
+      <% ['American', 'Chinese', 'Mediterranean', 'Sushi', 'Italian', 'Mexican', 'Indian', 'Thai', 'Fast Food'].each do |restaurant_type| %>
         <div class="type-option">
           <%= f.radio_button :food_type, restaurant_type %>
           <label><%= restaurant_type %></label>
