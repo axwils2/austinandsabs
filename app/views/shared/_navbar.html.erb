@@ -14,5 +14,31 @@
     <div class="restaurant-link">
       <%= link_to "Restaurants", restaurants_path %>
     </div>
+    <div class="card-link">
+      <%= link_to "Card", card_path %>
+    </div>
+  </div>
+</div>
+<div class="mobile-navbar-container">
+  <div class="nav-links">
+    <!-- <div class="photo-link">
+      <%= link_to "Photos", photos_path %>
+    </div> -->
+    <div class="roadmap-link mobile-link">
+      <%= link_to roadmaps_path do %>
+        <i class="fa fa-map fa-4x" aria-hidden="true"></i>
+      <% end %>
+    </div>
+    <div class="restaurant-link mobile-link">
+      <%= link_to restaurants_path do %>
+        <i class="fa fa-cutlery fa-4x" aria-hidden="true"></i>
+      <% end %>
+    </div>
+    <div class="card-link mobile-link">
+      <%= link_to card_path do %>
+        <i class="fa fa-heart fa-4x" aria-hidden="true"></i>
+      <% end %>
+    </div>
+
   </div>
 </div>

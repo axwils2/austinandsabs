@@ -81,3 +81,34 @@ fieldset {
     width: 40%;
   }
 }
+
+@media only screen and (max-device-width: 600px) {
+  .possible-restaurants, .add-restaurant-btn {
+    display: none;
+  }
+
+  .restaurant-container {
+    margin-top: 300px;
+  }
+
+  .restaurant-panels {
+    justify-content: center;
+
+    .rest-panel {
+      width: 100%;
+    }
+  }
+
+  .restaurant-display {
+    height: 100px;
+    font-size: 50px;
+
+    .restaurant-title {
+      padding: 35px 0;
+    }
+  }
+
+  .pick-restaurant-btn {
+    font-size: 80px;
+  }
+}

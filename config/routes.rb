@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :photos
 
   match 'restaurants/possible' => 'restaurants#render_possible', :via => :get
+  match '/card' => 'page#card', :via => :get
 
   root 'users#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

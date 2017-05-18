@@ -4,7 +4,13 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  padding: 100px 5%;
+  padding: 140px 5%;
+}
+
+@media (max-width: 450px) {
+  body {
+    margin-top: 95px;
+  }
 }
 
 p, ol, ul, td {

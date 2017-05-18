@@ -29,6 +29,7 @@
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
 
     div {
       padding: 0 20px;
@@ -45,7 +46,7 @@
       }
     }
 
-    .photo-link, .roadmap-link {
+    .photo-link, .roadmap-link, .restaurant-link {
       border-right: 1px solid silver;
     }
 
@@ -57,4 +58,61 @@
       }
     }
   }
+}
+
+.mobile-navbar-container {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 7;
+  border-top: solid 1px silver;
+  background: rgba(255, 255, 255, .9);
+
+  .nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .mobile-link {
+    width: 33%;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 20px;
+    a {
+      color: #7A16B3;
+    }
+
+    a:hover {
+      background-color: unset;
+      color: #b67bf0;
+    }
+  }
+
+  .roadmap-link, .restaurant-link {
+    border-right: solid 1px silver;
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  .navbar-container {
+    .nav-links {
+      justify-content: center;
+      .photo-link, .roadmap-link, .restaurant-link, .card-link {
+        display: none;
+      }
+      .home-link {
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .mobile-navbar-container {
+    display: block;
+  } 
 }

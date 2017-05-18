@@ -49,3 +49,9 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-device-width: 500px) {
+  .home-hero-container {
+    top: 98px;
+  }
+}
